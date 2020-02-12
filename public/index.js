@@ -70,7 +70,9 @@ function getCatName(){
   }
   else {
     postRequest.open('POST',requestURL);
+
     //Send post request with new cat data
+     /*Back-end not yet set up to update stats as they increase
     var requestBody = JSON.stringify({
       catName: name,
       catID: "cat" + cat_tracker,
@@ -85,9 +87,8 @@ function getCatName(){
     });
     postRequest.setRequestHeader('Content-Type', 'application/json');
     postRequest.send(requestBody);
-    console.log("postSent");
+    console.log("postSent");*/
 
-    console.log("name is", name);
         mainModal.classList = 'hidden';
         modalBackdrop.classList = 'hidden';
         catNames[cat_tracker].textContent = name;
@@ -109,7 +110,10 @@ input.addEventListener("keyup", function (event){
     else {
       console.log("name is", name);
       postRequest.open('POST',requestURL);
-      //Send post request with new cat data
+      
+       //Send post request with new cat data
+       //Back-end not yet set up to update stats as they increase
+       /*
       var requestBody = JSON.stringify({
         catName: name,
         catID: "cat" + cat_tracker,
@@ -123,7 +127,8 @@ input.addEventListener("keyup", function (event){
         total: 0
       });
       postRequest.setRequestHeader('Content-Type', 'application/json');
-      postRequest.send(requestBody);
+      postRequest.send(requestBody);*/
+
       console.log("postSent");
           mainModal.classList = 'hidden';
           modalBackdrop.classList = 'hidden';
